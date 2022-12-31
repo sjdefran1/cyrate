@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.IndividualBusinessActivity">
+
+    <ImageView
+        android:id="@+id/restaurant_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/provisions_hero"
+        app:layout_constraintBottom_toTopOf="@id/restaurant_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/delete_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/delete_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/edit_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/edit_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toStartOf="@id/delete_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_button_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:rotation="90"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/drop_down_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/raleway_medium"
+        android:letterSpacing=".15"
+        android:maxWidth="340dp"
+        android:text="Restaurant Name"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_image" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/restaurant_name" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:textFontWeight="500"
+        android:textColor="@color/black"
+        android:letterSpacing=".152"
+        android:textSize="15dp"
+        android:text="Rating:"
+        app:layout_constraintHorizontal_bias=".10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/ratings_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:textFontWeight="500"
+        android:textColor="@color/black"
+        android:letterSpacing=".15"
+        android:layout_marginLeft="5dp"
+        android:textSize="15dp"
+        android:text="4.7"
+        app:layout_constraintStart_toEndOf="@id/tv1"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:letterSpacing=".15"
+        android:text="Reviews:"
+        android:textColor="@color/black"
+        android:textFontWeight="500"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/reviews_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:textFontWeight="500"
+        android:textColor="@color/black"
+        android:letterSpacing=".15"
+        android:textSize="15dp"
+        android:layout_marginLeft="5dp"
+        android:text="23"
+        app:layout_constraintStart_toEndOf="@id/tv2"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:textFontWeight="500"
+        android:textColor="@color/black"
+        android:letterSpacing=".15"
+        android:textSize="15dp"
+        android:text="$$"
+        app:layout_constraintHorizontal_bias=".88"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/ratings_text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/menu_btn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:letterSpacing=".4"
+        android:background="@drawable/button_background"
+        android:text="MENU"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:elevation="10dp"
+
+        app:layout_constraintBottom_toTopOf="@id/reviews_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reviews_btn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:letterSpacing=".4"
+        android:background="@drawable/button_background"
+        android:text="REVIEWS"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:elevation="10dp"
+
+        app:layout_constraintBottom_toTopOf="@id/busPosts_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/busPosts_btn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:letterSpacing=".4"
+        android:background="@drawable/button_background"
+        android:text="POSTS"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:elevation="10dp"
+
+        app:layout_constraintBottom_toTopOf="@id/find_us_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviews_btn" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/find_us_btn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:letterSpacing=".4"
+        android:background="@drawable/button_background"
+        android:text="FIND US"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:elevation="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busPosts_btn" />
+
+
+    <ImageView
+        android:id="@+id/favorite_star"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Add to Favorites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_image"
+        app:srcCompat="@drawable/star_outline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

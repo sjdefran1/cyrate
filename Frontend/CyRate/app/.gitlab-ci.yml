@@ -1,0 +1,40 @@
+stages:
+  - maventry
+  - androidtry
+  - androidtest
+  # - androidtry
+
+maven-build: #this is a JOB
+  stage: maventry
+  tags:
+    - springboot # this is LINK to the shell runner on the remote-server
+  script:
+    - cd Backend/cy_rate #change directory to where you have your springboot application
+    - mvn package
+android-build: #this is another job
+   image: gjandres/android-ci:latest # this is a directive to DOCKER
+   stage: androidtry
+   tags:
+     - android_studio #this is LINK to the docker runner on the remote-server
+   before_script:
+     - export GRADLE_USER_HOME=`pwd`/.gradle
+     - chmod +x ./Frontend/CyRate/gradlew #change directory to where you have ‘gradlew’ in your android directory
+   script:
+     - cd Frontend/CyRate/app #change directory to where you have your android application
+     - ./gradlew assemble
+   artifacts:
+     paths:
+       - Android_test/app/build/outputs/
+android-test:
+  image: gjandres/android-ci:latest
+  stage: androidtest
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - chmod +x ./Frontend/gradlew
+  tags:
+    - android_studio
+  script:
+    - cd Frontend
+    - ./gradlew test
+
+

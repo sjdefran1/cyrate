@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">CyRate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="restaurantListNames">
+        <item>Provisions Lot F</item>
+    </string-array>
+
+    <string-array name="restaurantListCategory">
+        <item>American Restaurant</item>
+    </string-array>
+
+    <string-array name="restaurantListAddress">
+        <item>2400 N Loop Dr, Ames, IA 50010</item>
+    </string-array>
+
+    <string-array name="restaurantListRating">
+        <item>5.0</item>
+    </string-array>
+
+    <string-array name="restaurantListHours">
+        <item>9:00a - 9:00p</item>
+    </string-array>
+
+    <string name="user_types_dropdown">userTypesDropDown</string>
+    <string-array name="userTypes">
+        <item>Normal</item>
+        <item>Business Owner</item>
+    </string-array>
+
+    <string name="user_types_dropdown_admin">userTypesDropDown</string>
+    <string-array name="userTypesAdmin">
+        <item>Normal</item>
+        <item>Business Owner</item>
+        <item>Admin</item>
+    </string-array>
+</resources>

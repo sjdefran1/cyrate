@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/busPost_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="20dp"
+        app:strokeColor="@color/lightGray"
+        app:cardCornerRadius="20dp"
+        app:strokeWidth=".01dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/busCard_constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:elevation="12dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/busProfilePic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/provisions_hero" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/busPost_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Provisions Lot F"
+                android:fontFamily="@font/sf_pro_medium"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="@id/cardView" />
+
+            <TextView
+                android:id="@+id/busPost_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="November 2"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                android:fontFamily="@font/sf_pro_thin"
+                app:layout_constraintTop_toBottomOf="@id/busPost_name"
+                app:layout_constraintStart_toEndOf="@id/cardView"
+                />
+
+            <TextView
+                android:id="@+id/busPost_bodyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Try out our new Chicken Salad, available today!"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/sf_pro_thin"
+                app:layout_constraintTop_toBottomOf="@id/cardView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/busPost_photo"
+                android:layout_width="300dp"
+                android:paddingVertical="15dp"
+                android:scaleType="fitXY"
+                android:layout_height="200dp"
+                android:src="@drawable/chicken_salad"
+                app:layout_constraintTop_toBottomOf="@id/busPost_bodyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/busPost_thumbsUp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/thumbs_up"
+                app:layout_constraintHorizontal_bias=".2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/busPost_photo"/>
+
+            <ImageView
+                android:id="@+id/busPost_comment"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintHorizontal_bias=".4"
+                android:src="@drawable/comment_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/busPost_photo"/>
+
+            <ImageView
+                android:id="@+id/busPost_deleteIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintHorizontal_bias=".6"
+                android:src="@drawable/delete_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/busPost_photo"/>
+
+            <ImageView
+                android:id="@+id/busPost_editIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintHorizontal_bias=".8"
+                android:src="@drawable/edit_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/busPost_photo"/>
+
+
+            <ImageView
+                android:id="@+id/heart_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/hearticon"
+                app:layout_constraintEnd_toStartOf="@id/busPost_likeCount"
+                app:layout_constraintTop_toTopOf="@id/busPost_name"
+                />
+
+
+            <TextView
+                android:id="@+id/busPost_likeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1,293"
+                android:fontFamily="@font/sf_pro_thin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/heart_icon"
+                app:layout_constraintBottom_toBottomOf="@id/heart_icon"
+                android:layout_marginRight="15dp"
+                />
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
