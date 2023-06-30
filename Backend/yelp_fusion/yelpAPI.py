@@ -6,6 +6,7 @@ import sqlalchemy
 # other file in dir
 from menuUtil import find_menu
 
+# lol
 db_u = 'cyrate'
 db_p = 'password'
 db_host = 'coms-309-020.class.las.iastate.edu'
